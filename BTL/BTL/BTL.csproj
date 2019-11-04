@@ -67,7 +67,51 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="bower_components\bower_components\bootstrap-colorpicker\dist\css\bootstrap-colorpicker.min.css" />
+    <Content Include="bower_components\bower_components\bootstrap-colorpicker\dist\js\bootstrap-colorpicker.min.js" />
+    <Content Include="bower_components\bower_components\bootstrap-datepicker\dist\css\bootstrap-datepicker.min.css" />
+    <Content Include="bower_components\bower_components\bootstrap-datepicker\dist\js\bootstrap-datepicker.min.js" />
+    <Content Include="bower_components\bower_components\bootstrap-daterangepicker\daterangepicker.css" />
+    <Content Include="bower_components\bower_components\bootstrap-daterangepicker\daterangepicker.js" />
+    <Content Include="bower_components\bower_components\bootstrap\dist\css\bootstrap.min.css" />
+    <Content Include="bower_components\bower_components\bootstrap\dist\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="bower_components\bower_components\bootstrap\dist\js\bootstrap.min.js" />
+    <Content Include="bower_components\bower_components\chart.js\Chart.js" />
+    <Content Include="bower_components\bower_components\ckeditor\ckeditor.js" />
+    <Content Include="bower_components\bower_components\datatables.net-bs\css\dataTables.bootstrap.min.css" />
+    <Content Include="bower_components\bower_components\datatables.net-bs\js\dataTables.bootstrap.min.js" />
+    <Content Include="bower_components\bower_components\datatables.net\js\jquery.dataTables.min.js" />
+    <Content Include="bower_components\bower_components\fastclick\lib\fastclick.js" />
+    <Content Include="bower_components\bower_components\Flot\jquery.flot.categories.js" />
+    <Content Include="bower_components\bower_components\Flot\jquery.flot.js" />
+    <Content Include="bower_components\bower_components\Flot\jquery.flot.pie.js" />
+    <Content Include="bower_components\bower_components\Flot\jquery.flot.resize.js" />
+    <Content Include="bower_components\bower_components\font-awesome\css\font-awesome.min.css" />
+    <Content Include="bower_components\bower_components\font-awesome\fonts\fontawesome-webfont3e6e.svg" />
+    <Content Include="bower_components\bower_components\fullcalendar\dist\fullcalendar.min.css" />
+    <Content Include="bower_components\bower_components\fullcalendar\dist\fullcalendar.min.js" />
+    <Content Include="bower_components\bower_components\fullcalendar\dist\fullcalendar.print.min.css" />
+    <Content Include="bower_components\bower_components\Ionicons\css\ionicons.min.css" />
+    <Content Include="bower_components\bower_components\Ionicons\fonts\ionicons28b5.svg" />
+    <Content Include="bower_components\bower_components\jquery-knob\dist\jquery.knob.min.js" />
+    <Content Include="bower_components\bower_components\jquery-knob\js\jquery.knob.js" />
+    <Content Include="bower_components\bower_components\jquery-slimscroll\jquery.slimscroll.min.js" />
+    <Content Include="bower_components\bower_components\jquery-sparkline\dist\jquery.sparkline.min.js" />
+    <Content Include="bower_components\bower_components\jquery-ui\jquery-ui.min.js" />
+    <Content Include="bower_components\bower_components\jquery\dist\jquery.min.js" />
+    <Content Include="bower_components\bower_components\jvectormap\jquery-jvectormap.css" />
+    <Content Include="bower_components\bower_components\moment\min\moment.min.js" />
+    <Content Include="bower_components\bower_components\moment\moment.js" />
+    <Content Include="bower_components\bower_components\morris.js\morris.css" />
+    <Content Include="bower_components\bower_components\morris.js\morris.min.js" />
+    <Content Include="bower_components\bower_components\PACE\pace.min.js" />
+    <Content Include="bower_components\bower_components\raphael\raphael.min.js" />
+    <Content Include="bower_components\bower_components\select2\dist\css\select2.min.css" />
+    <Content Include="bower_components\bower_components\select2\dist\js\select2.full.min.js" />
     <Content Include="ClientAdmin\DemoAdminPage.aspx" />
+    <Content Include="ClientAdmin\Song_AddLyricsSong.aspx" />
+    <Content Include="ClientAdmin\Song_AddSongTest.aspx" />
+    <Content Include="ClientAdmin\Song_ListSong.aspx" />
     <Content Include="ClientAdmin\TrangChuAdmin.aspx" />
     <Content Include="dist\css\AdminLTE.min.css" />
     <Content Include="dist\css\skins\_all-skins.min.css" />
@@ -107,12 +151,34 @@
     <Compile Include="ClientAdmin\AdminMasterPage.Master.designer.cs">
       <DependentUpon>AdminMasterPage.Master</DependentUpon>
     </Compile>
+    <Compile Include="ClientAdmin\DBconnection\DBHelper.cs" />
     <Compile Include="ClientAdmin\DemoAdminPage.aspx.cs">
       <DependentUpon>DemoAdminPage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="ClientAdmin\DemoAdminPage.aspx.designer.cs">
       <DependentUpon>DemoAdminPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ClientAdmin\Song_AddLyricsSong.aspx.cs">
+      <DependentUpon>Song_AddLyricsSong.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ClientAdmin\Song_AddLyricsSong.aspx.designer.cs">
+      <DependentUpon>Song_AddLyricsSong.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ClientAdmin\Song_AddSongTest.aspx.cs">
+      <DependentUpon>Song_AddSongTest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ClientAdmin\Song_AddSongTest.aspx.designer.cs">
+      <DependentUpon>Song_AddSongTest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ClientAdmin\Song_ListSong.aspx.cs">
+      <DependentUpon>Song_ListSong.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ClientAdmin\Song_ListSong.aspx.designer.cs">
+      <DependentUpon>Song_ListSong.aspx</DependentUpon>
     </Compile>
     <Compile Include="ClientAdmin\TrangChuAdmin.aspx.cs">
       <DependentUpon>TrangChuAdmin.aspx</DependentUpon>
@@ -135,6 +201,19 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="ClientAdmin\AdminMasterPage.Master" />
+    <Content Include="bower_components\bower_components\bootstrap\dist\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="bower_components\bower_components\bootstrap\dist\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="bower_components\bower_components\bootstrap\dist\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="bower_components\bower_components\bootstrap\dist\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="bower_components\bower_components\bootstrap\dist\fonts\glyphicons-halflings-regulard41d.eot" />
+    <Content Include="bower_components\bower_components\font-awesome\fonts\fontawesome-webfont3e6e.eot" />
+    <Content Include="bower_components\bower_components\font-awesome\fonts\fontawesome-webfont3e6e.ttf" />
+    <Content Include="bower_components\bower_components\font-awesome\fonts\fontawesome-webfont3e6e.woff" />
+    <Content Include="bower_components\bower_components\font-awesome\fonts\fontawesome-webfont3e6e.woff2" />
+    <Content Include="bower_components\bower_components\font-awesome\fonts\fontawesome-webfontd41d.eot" />
+    <Content Include="bower_components\bower_components\Ionicons\fonts\ionicons28b5.eot" />
+    <Content Include="bower_components\bower_components\Ionicons\fonts\ionicons28b5.ttf" />
+    <Content Include="bower_components\bower_components\Ionicons\fonts\ionicons28b5.woff" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
