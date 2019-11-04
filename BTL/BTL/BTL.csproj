@@ -67,6 +67,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="ClientAdmin\AccountEdit.aspx" />
+    <Content Include="ClientAdmin\AccountInsert.aspx" />
     <Content Include="ClientAdmin\DemoAdminPage.aspx" />
     <Content Include="ClientAdmin\TrangChuAdmin.aspx" />
     <Content Include="dist\css\AdminLTE.min.css" />
@@ -100,6 +102,20 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ClientAdmin\AccountEdit.aspx.cs">
+      <DependentUpon>AccountEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ClientAdmin\AccountEdit.aspx.designer.cs">
+      <DependentUpon>AccountEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ClientAdmin\AccountInsert.aspx.cs">
+      <DependentUpon>AccountInsert.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ClientAdmin\AccountInsert.aspx.designer.cs">
+      <DependentUpon>AccountInsert.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ClientAdmin\AdminMasterPage.Master.cs">
       <DependentUpon>AdminMasterPage.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
