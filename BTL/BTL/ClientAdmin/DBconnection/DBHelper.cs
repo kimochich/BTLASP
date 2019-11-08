@@ -12,24 +12,74 @@ namespace BTL.ClientAdmin.DBconnection
         private SqlConnection connection;
         public DBHelper()
         {
-            String strCon = @"Data Source=DESKTOP-RPK6PAD\SQLEXPRESS01;Initial Catalog=BTLASP;Integrated Security=True";
+            //mai sửa nhở đổi cái strcon nehs, t biết mà. có gì upcode len k dk thì nt cho t nhé
+            // uh , t backup trước. mà t đíu hiểu sao m code sửa gì ở kia mà bị confict thế @@ chịu é thội kệ đi đi ngủ đi mai quây tiế[ ok m
+            String strCon = @"Data Source=DESKTOP-6PC73Q3\SQLEXPRESS;Initial Catalog=BTLASP;Integrated Security=True;MultipleActiveResultSets=True;";
             connection = new SqlConnection(strCon);
+           
         }
 
         public bool addSong(String userName, int subMenu, int categoryId, String musicName, String createDate, String imageUrl,
-            String authorName, String dateBirth, String address, String des, int gender
+            int authorID
             ) {
             try
             {
+
                 connection.Open();
-                String sqlQueryAddAuthor = "INSERT INTO author VALUES('" + authorName + "','" + dateBirth + "','" + address + "','" + des + "','" + gender + "')";
-                SqlCommand cmd = new SqlCommand(sqlQueryAddAuthor, connection);
-                cmd.ExecuteNonQuery();
                 String sqlQueryAddMusic = "INSERT INTO music VALUES('" + userName + "','" + subMenu + "','" + categoryId + "','" + musicName + "','" + createDate + "','" + imageUrl + "')";
-                cmd = new SqlCommand(sqlQueryAddMusic, connection);
-                cmd.ExecuteNonQuery();
-                
+               SqlCommand cmd1 = new SqlCommand(sqlQueryAddMusic, connection);
+                cmd1.ExecuteNonQuery();
+                int a = 0;
+                String sqlQueryAddAuthor = "SELECT top 1 MusicID from Music Order by MusicID DESC";
+                SqlCommand cmd = new SqlCommand(sqlQueryAddAuthor, connection);
+                SqlDataReader sqlDataReader = cmd.ExecuteReader();
+                while (sqlDataReader.Read())
+                {
+                    a = int.Parse(sqlDataReader["MusicID"].ToString());
+                }
+                String sqlQueryAddMusicAuthor = "INSERT INTO Music_Author VALUES('" +a+ "','" + authorID + "')";
+                cmd1 = new SqlCommand(sqlQueryAddMusicAuthor, connection);
+                cmd1.ExecuteNonQuery();
                 connection.Close();
+                return true;
+            }
+            catch (SqlException ex)
+            {
+                
+                return false;
+            }
+        }
+        public int getLastIdSong()
+        {
+            try
+            {
+                connection.Open();
+                int a = 0;
+                String sqlQueryAddAuthor = "SELECT top 1 MusicID from Music Order by MusicID DESC";
+                SqlCommand cmd = new SqlCommand(sqlQueryAddAuthor, connection);
+                SqlDataReader sqlDataReader = cmd.ExecuteReader();
+                while(sqlDataReader.Read())
+                {
+                    a = int.Parse(sqlDataReader["MusicID"].ToString());
+                }
+                connection.Close();
+                return a;
+            }
+            catch (SqlException)
+            {
+                return 0;
+            }
+        }
+
+
+        public bool insertLyric(int MusicID, int languageID, String lyricText)
+        {
+            try
+            {
+                connection.Open();
+                String sql = "insert into Lyrics values ('" + MusicID + "','" + languageID + "','" + lyricText + "')";
+                SqlCommand cmd = new SqlCommand(sql, connection);
+                cmd.ExecuteNonQuery();
                 return true;
             }
             catch (SqlException)
@@ -37,6 +87,7 @@ namespace BTL.ClientAdmin.DBconnection
                 return false;
             }
         }
-       
     }
+
+    
 }

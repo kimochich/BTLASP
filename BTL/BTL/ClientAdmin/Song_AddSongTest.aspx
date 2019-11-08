@@ -8,17 +8,18 @@
                 <div class="form-group">
                     <label>Người đăng</label>
                     <asp:DropDownList runat="server" class="form-control" id="drlUserName" DataSourceID="SqlDataSource1" DataTextField="UserName" DataValueField="UserName" />
-                    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:BTLASPConnectionStringAddSong %>" SelectCommand="SELECT * FROM [Account]"></asp:SqlDataSource>
+                    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:BTLASPConnectionString2 %>" SelectCommand="SELECT * FROM [Account]">
+                    </asp:SqlDataSource>
                 </div>
                 <div class="form-group">
                     <label>Thể loại</label>
                     <asp:DropDownList runat="server" class="form-control" id="drlCategory" DataSourceID="SqlDataSource2" DataTextField="CategoryName" DataValueField="CategoryID"/>
-                    <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:BTLASPConnectionStringAddSong %>" SelectCommand="SELECT * FROM [Category]"></asp:SqlDataSource>
+                    <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:BTLASPConnectionString2 %>" SelectCommand="SELECT * FROM [Category]"></asp:SqlDataSource>
                 </div>  
                 <div class="form-group">
                     <label>Danh mục</label>
                     <asp:DropDownList runat="server" ID="drlSubMenu" class="form-control" DataSourceID="SqlDataSource3" DataTextField="SubMenuName" DataValueField="SubMenuID"/>
-                    <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="<%$ ConnectionStrings:BTLASPConnectionStringAddSong %>" SelectCommand="SELECT * FROM [Sub_Menu]"></asp:SqlDataSource>
+                    <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="<%$ ConnectionStrings:BTLASPConnectionString2 %>" SelectCommand="SELECT * FROM [Sub_Menu]"></asp:SqlDataSource>
                 </div>  
                 <div class="form-group">
                     <label>Tên bài hát</label>
@@ -26,27 +27,12 @@
                 </div>
                 <div class="form-group">
                     <label>Tác giả</label>
-                    <asp:TextBox runat="server"  class="form-control" id="txtAuthor" placeholder="Tên tác giả"/>
-                </div>
-                <div class="form-group">
-                    <label>Sinh ngày</label>
-                    <asp:TextBox runat="server" TextMode="DateTime"  class="form-control" id="txtDateBirth" placeholder="yyyy-MM-dd"/>
-                </div>
-                <div class="form-group">
-                    <label>Địa chỉ</label>
-                    <asp:TextBox runat="server"  class="form-control" id="txtAddress" placeholder="Địa chỉ"/>
-                </div>
-                <div class="form-group">
-                    <label>Mô tả</label>
-                    <asp:TextBox runat="server"  class="form-control" id="txtDes" placeholder="Mô tả"/>
-                </div>
-                <div class="form-group">
-                    <label>Giới tính</label>
-                    <asp:DropDownList runat="server"   class="form-control" id="drlGender">
-                        <asp:ListItem Value="1">Nam</asp:ListItem>
-                        <asp:ListItem Value="0">Nữ</asp:ListItem>
+                    <br />
+                    <asp:DropDownList class="form-control" ID="drlAuthor" runat="server" DataSourceID="SqlDataSource4" DataTextField="AuthorName" DataValueField="AuthorID">
                     </asp:DropDownList>
+                    <asp:SqlDataSource ID="SqlDataSource4" runat="server" ConnectionString="<%$ ConnectionStrings:BTLASPConnectionString2 %>" SelectCommand="SELECT * FROM [Author]"></asp:SqlDataSource>
                 </div>
+                
                 <div style="margin-top:10px; margin-bottom:10px">
                     <asp:Label CssClass="text-red" ID="mes" runat="server" />
                 </div>

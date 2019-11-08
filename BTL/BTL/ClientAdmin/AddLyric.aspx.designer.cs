@@ -10,16 +10,16 @@
 namespace BTL.ClientAdmin {
     
     
-    public partial class Song_AddSongTest {
+    public partial class AddLyric {
         
         /// <summary>
-        /// drlUserName control.
+        /// drlMusicID control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList drlUserName;
+        protected global::System.Web.UI.WebControls.DropDownList drlMusicID;
         
         /// <summary>
         /// SqlDataSource1 control.
@@ -31,13 +31,13 @@ namespace BTL.ClientAdmin {
         protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource1;
         
         /// <summary>
-        /// drlCategory control.
+        /// drlLanguage control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList drlCategory;
+        protected global::System.Web.UI.WebControls.DropDownList drlLanguage;
         
         /// <summary>
         /// SqlDataSource2 control.
@@ -49,57 +49,21 @@ namespace BTL.ClientAdmin {
         protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource2;
         
         /// <summary>
-        /// drlSubMenu control.
+        /// txtLoibaiHat control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList drlSubMenu;
+        protected global::System.Web.UI.WebControls.TextBox txtLoibaiHat;
         
         /// <summary>
-        /// SqlDataSource3 control.
+        /// mess control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource3;
-        
-        /// <summary>
-        /// txtMusicName control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtMusicName;
-        
-        /// <summary>
-        /// drlAuthor control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList drlAuthor;
-        
-        /// <summary>
-        /// SqlDataSource4 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource4;
-        
-        /// <summary>
-        /// mes control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label mes;
+        protected global::System.Web.UI.WebControls.Label mess;
     }
 }

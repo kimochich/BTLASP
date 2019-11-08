@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace BTL.ClientAdmin
 {
-    public partial class Song_AddLyricsSong : System.Web.UI.Page
+    public partial class ListLyricByID : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {

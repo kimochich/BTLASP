@@ -23,29 +23,15 @@ namespace BTL.ClientAdmin
             {
                 mes.Text = "Hãy nhập tên bài hát!";
             }
-            else if (txtAuthor.Text.Equals(""))
-            {
-                mes.Text = "Hãy nhập tên tác giả!";
-            }
-            else if (txtDateBirth.Text.Equals(""))
-            {
-                mes.Text = "Hãy nhập ngày sinh tác giả!";
-            }
-            else if (txtAddress.Text.Equals(""))
-            {
-                mes.Text = "Hãy nhập địa chỉ tác giả!";
-            }
-            else if (txtDes.Text.Equals(""))
-            {
-                mes.Text = "Hãy nhập mô tả tác giả!";
-            }
+            
             else
             {
                 bool isDone = dbHelper.addSong(drlUserName.Text, int.Parse(drlSubMenu.Text), int.Parse(drlCategory.Text), txtMusicName.Text, DateTime.Now.ToString("yyyy-MM-dd"), "nodata",
-                txtAuthor.Text, txtDateBirth.Text, txtAddress.Text, txtDes.Text, int.Parse(drlGender.SelectedValue));
+                int.Parse(drlAuthor.Text));
                 if (isDone)
                 {
-                    Response.Redirect("Song_AddLyricsSong.aspx");
+                   int id = dbHelper.getLastIdSong();
+                    Response.Redirect("Song_AddLyricsSongByID.aspx?id="+id+"");
                 }
                 else
                 {

@@ -108,8 +108,13 @@
     <Content Include="bower_components\bower_components\raphael\raphael.min.js" />
     <Content Include="bower_components\bower_components\select2\dist\css\select2.min.css" />
     <Content Include="bower_components\bower_components\select2\dist\js\select2.full.min.js" />
-    <Content Include="ClientAdmin\DemoAdminPage.aspx" />
-    <Content Include="ClientAdmin\Song_AddLyricsSong.aspx" />
+    <Content Include="ClientAdmin\AccountEdit.aspx" />
+    <Content Include="ClientAdmin\AccountInsert.aspx" />
+    <Content Include="ClientAdmin\AddLyric.aspx" />
+    <Content Include="ClientAdmin\AuthorInsert.aspx" />
+    <Content Include="ClientAdmin\ListAuthor.aspx" />
+    <Content Include="ClientAdmin\ListLyricByID.aspx" />
+    <Content Include="ClientAdmin\Song_AddLyricsSongByID.aspx" />
     <Content Include="ClientAdmin\Song_AddSongTest.aspx" />
     <Content Include="ClientAdmin\Song_ListSong.aspx" />
     <Content Include="ClientAdmin\TrangChuAdmin.aspx" />
@@ -144,6 +149,27 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ClientAdmin\AccountEdit.aspx.cs">
+      <DependentUpon>AccountEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ClientAdmin\AccountEdit.aspx.designer.cs">
+      <DependentUpon>AccountEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ClientAdmin\AccountInsert.aspx.cs">
+      <DependentUpon>AccountInsert.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ClientAdmin\AccountInsert.aspx.designer.cs">
+      <DependentUpon>AccountInsert.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ClientAdmin\AddLyric.aspx.cs">
+      <DependentUpon>AddLyric.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ClientAdmin\AddLyric.aspx.designer.cs">
+      <DependentUpon>AddLyric.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ClientAdmin\AdminMasterPage.Master.cs">
       <DependentUpon>AdminMasterPage.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -151,20 +177,34 @@
     <Compile Include="ClientAdmin\AdminMasterPage.Master.designer.cs">
       <DependentUpon>AdminMasterPage.Master</DependentUpon>
     </Compile>
+    <Compile Include="ClientAdmin\AuthorInsert.aspx.cs">
+      <DependentUpon>AuthorInsert.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ClientAdmin\AuthorInsert.aspx.designer.cs">
+      <DependentUpon>AuthorInsert.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ClientAdmin\DBconnection\DBHelper.cs" />
-    <Compile Include="ClientAdmin\DemoAdminPage.aspx.cs">
-      <DependentUpon>DemoAdminPage.aspx</DependentUpon>
+    <Compile Include="ClientAdmin\ListAuthor.aspx.cs">
+      <DependentUpon>ListAuthor.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="ClientAdmin\DemoAdminPage.aspx.designer.cs">
-      <DependentUpon>DemoAdminPage.aspx</DependentUpon>
+    <Compile Include="ClientAdmin\ListAuthor.aspx.designer.cs">
+      <DependentUpon>ListAuthor.aspx</DependentUpon>
     </Compile>
-    <Compile Include="ClientAdmin\Song_AddLyricsSong.aspx.cs">
-      <DependentUpon>Song_AddLyricsSong.aspx</DependentUpon>
+    <Compile Include="ClientAdmin\ListLyricByID.aspx.cs">
+      <DependentUpon>ListLyricByID.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="ClientAdmin\Song_AddLyricsSong.aspx.designer.cs">
-      <DependentUpon>Song_AddLyricsSong.aspx</DependentUpon>
+    <Compile Include="ClientAdmin\ListLyricByID.aspx.designer.cs">
+      <DependentUpon>ListLyricByID.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ClientAdmin\Song_AddLyricsSongByID.aspx.cs">
+      <DependentUpon>Song_AddLyricsSongByID.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ClientAdmin\Song_AddLyricsSongByID.aspx.designer.cs">
+      <DependentUpon>Song_AddLyricsSongByID.aspx</DependentUpon>
     </Compile>
     <Compile Include="ClientAdmin\Song_AddSongTest.aspx.cs">
       <DependentUpon>Song_AddSongTest.aspx</DependentUpon>

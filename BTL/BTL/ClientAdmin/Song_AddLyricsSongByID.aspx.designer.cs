@@ -10,42 +10,51 @@
 namespace BTL.ClientAdmin {
     
     
-    public partial class Song_ListSong {
+    public partial class Song_AddLyricsSong {
         
         /// <summary>
-        /// girdView_ListSong control.
+        /// musicID control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView girdView_ListSong;
+        protected global::System.Web.UI.WebControls.Label musicID;
         
         /// <summary>
-        /// SqlDataSource1 control.
+        /// drlLanguage control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource1;
+        protected global::System.Web.UI.WebControls.DropDownList drlLanguage;
         
         /// <summary>
-        /// DanhSachBaiHat control.
+        /// SqlDataSource2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource DanhSachBaiHat;
+        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource2;
         
         /// <summary>
-        /// sqlListSong control.
+        /// txtLoibaiHat control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource sqlListSong;
+        protected global::System.Web.UI.WebControls.TextBox txtLoibaiHat;
+        
+        /// <summary>
+        /// mess control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label mess;
     }
 }

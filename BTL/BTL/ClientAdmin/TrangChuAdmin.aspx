@@ -110,12 +110,12 @@
                 <li class="header">MENU</li>
 
                 <li>
-                    <a href="home.jsp">
+                    <a href="AccountEdit.aspx">
                         <i class="glyphicon glyphicon-home"></i> <span>Tài khoản</span>
                     </a>
                 </li>
                 <li class="treeview">
-                    <a href="sanpham.jsp">
+                    <a href="Song_ListSong.aspx">
                         <i class="glyphicon glyphicon-signal"></i>
                         <span>Bài Hát</span>
                     </a>
