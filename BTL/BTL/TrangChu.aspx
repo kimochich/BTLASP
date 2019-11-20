@@ -79,12 +79,16 @@
             </div>
             <div class="collapse navbar-collapse">
                 <ul class="nav navbar-nav">
-                    <li class="active"><a href="lyrics.html"><i class="fa fa-folder-open"></i>&nbsp;Nhạc việt</a></li>
+                      <asp:Literal ID="ltrMenu" runat="server" >
+                    
+                   </asp:Literal>
+                   <!-- <li class="active"><a href="lyrics.html"><i class="fa fa-folder-open"></i>&nbsp;Nhạc việt</a></li>
                     <li class=""><a href="chords.html"><i class="fa fa-music"></i>&nbsp;US-UK</a></li>
-                    <li class=""><a href="kara.html"><i class="fa fa-microphone"></i>&nbsp;Hàn Quốc</a></li>
-                    <!--Menu add here-->
+                    <li class=""><a href="kara.html"><i class="fa fa-microphone"></i>&nbsp;Hàn Quốc</a></li>      
+                          <!--Menu add here-->
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
+                  
                     <li class=""><a href="member/register.html"><i class="fa fa-key fa-fw">&nbsp;</i>Đăng ký</a></li>
                     <li class=""><a href="member/login.html"><i class="fa fa-lock fa-fw">&nbsp;</i>Đăng nhập</a></li>
                 </ul>

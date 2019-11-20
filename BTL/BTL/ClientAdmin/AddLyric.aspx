@@ -1,4 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/ClientAdmin/AdminMasterPage.Master" AutoEventWireup="true" CodeBehind="AddLyric.aspx.cs" Inherits="BTL.ClientAdmin.AddLyric" %>
+<%@ Register Assembly="CKEditor.NET" Namespace="CKEditor.NET" TagPrefix="CKEditor" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="noidung" runat="server">
     <div class="col-lg-12">
             <h2 class="text-center">Thêm lời bài hát mới</h2>
@@ -17,8 +18,12 @@
                 
                 <div class="form-group">
                     <label>Lời bài hát</label>
-                   
-                    <asp:TextBox id="txtLoibaiHat" runat="server" class="form-control"  TextMode="MultiLine"></asp:TextBox>
+                    
+                   <CKEditor:CKEditorControl ID="CKEditor1" BasePath="/ckeditor/" runat="server">
+
+                   </CKEditor:CKEditorControl>
+                    <!--<asp:TextBox id="txtLoibaiHat" runat="server" class="form-control"  
+                        TextMode="MultiLine"></asp:TextBox>-->
                 </div>
               <div class="form-group">
                     <asp:Label runat="server" ID="mess"></asp:Label>

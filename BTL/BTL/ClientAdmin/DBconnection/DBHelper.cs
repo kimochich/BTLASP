@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Data.Sql;
 using System.Data.SqlClient;
-
+using System.Data;
 namespace BTL.ClientAdmin.DBconnection
 {
     public class DBHelper
@@ -17,6 +17,41 @@ namespace BTL.ClientAdmin.DBconnection
             String strCon = @"Data Source=DESKTOP-6PC73Q3\SQLEXPRESS;Initial Catalog=BTLASP;Integrated Security=True;MultipleActiveResultSets=True;";
             connection = new SqlConnection(strCon);
            
+        }
+
+        public  DataTable GetDataTable(String sql)
+        {
+            DataTable dt = new DataTable();
+        
+            connection.Open();
+            SqlDataAdapter da = new SqlDataAdapter(sql, connection);
+            da.Fill(dt);
+            return dt;
+        }
+        public  SqlDataReader GetSqlDataReader(String sql)
+        {
+
+          
+            connection.Open();
+            SqlCommand cmd = new SqlCommand(sql, connection);
+            SqlDataReader dataReader = cmd.ExecuteReader();
+            return dataReader;
+
+        }
+
+        public Boolean ExcuteNonQuery(String sql)
+        {
+            try
+            {
+                connection.Open();
+                SqlCommand cmd = new SqlCommand(sql, connection);
+                cmd.ExecuteNonQuery();
+
+            }catch(SqlException ex)
+            {
+                return false;
+            }
+            return true;
         }
 
         public bool addSong(String userName, int subMenu, int categoryId, String musicName, String createDate, String imageUrl,
@@ -77,7 +112,7 @@ namespace BTL.ClientAdmin.DBconnection
             try
             {
                 connection.Open();
-                String sql = "insert into Lyrics values ('" + MusicID + "','" + languageID + "','" + lyricText + "')";
+                String sql = "insert into Lyrics values ('" + MusicID + "','" + languageID + "',N'" + lyricText + "')";
                 SqlCommand cmd = new SqlCommand(sql, connection);
                 cmd.ExecuteNonQuery();
                 return true;
