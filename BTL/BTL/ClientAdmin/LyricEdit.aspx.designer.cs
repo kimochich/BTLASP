@@ -7,10 +7,19 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace BTL {
+namespace BTL.ClientAdmin {
     
     
-    public partial class Detail {
+    public partial class LyricEdit {
+        
+        /// <summary>
+        /// musicID control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label musicID;
         
         /// <summary>
         /// drlLanguage control.
@@ -22,30 +31,30 @@ namespace BTL {
         protected global::System.Web.UI.WebControls.DropDownList drlLanguage;
         
         /// <summary>
-        /// btnLang control.
+        /// SqlDataSource2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnLang;
+        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource2;
         
         /// <summary>
-        /// ltrDetail control.
+        /// txtLoibaiHat control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal ltrDetail;
+        protected global::CKEditor.NET.CKEditorControl txtLoibaiHat;
         
         /// <summary>
-        /// ltrTacGia control.
+        /// mess control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal ltrTacGia;
+        protected global::System.Web.UI.WebControls.Label mess;
     }
 }

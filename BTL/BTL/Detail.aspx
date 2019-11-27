@@ -1,32 +1,33 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/pageMaster.Master" AutoEventWireup="true" CodeBehind="Detail.aspx.cs" Inherits="BTL.Detail" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="noidung" runat="server">
     <div class="col-md-8">
-                    <div>
-    <form id="formsearch" name="search" method="post" action="http://www.lyrics.vn/search.html">
-        <table>
-            <tr>
-                <td style="width: 100%;">
-                    <div style="position: relative;">
-                        <input type="hidden" name="typesearch" value="chords"/>
-                        <input type="text" id="tf_search" name="tf_search" class="form-control input-search" placeholder="Nhập tên bài hát / tác giả / lời bài hát để tìm kiếm" value="" autocomplete="false"/>
-                        <span id="searchclear" class="glyphicon glyphicon-remove"></span>
-                    </div>
-                </td>
-                <td class="buttons left" style="width: 60px;">                                    
-                    <button type="submit" class="btnsearch"><i class="fa fa-search fa-fw fa-2x"></i></button>
-                </td>
-            </tr>                            
-        </table>
-    </form>
-</div>
-<div id="nav-search">
+        <div>
+            <form id="formsearch" name="search" method="post" action="http://www.lyrics.vn/search.html">
+                <table>
+                    <tr>
+                        <td style="width: 100%;">
+                            <div style="position: relative;">
+                                <input type="hidden" name="typesearch" value="chords" />
+                                <input type="text" id="tf_search" name="tf_search" class="form-control input-search" placeholder="Nhập tên bài hát / tác giả / lời bài hát để tìm kiếm" value="" autocomplete="false" />
+                                <span id="searchclear" class="glyphicon glyphicon-remove"></span>
+                            </div>
+                        </td>
+                        <td class="buttons left" style="width: 60px;">
+                            <button type="submit" class="btnsearch"><i class="fa fa-search fa-fw fa-2x"></i></button>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+        <%--<div id="nav-search">
     <ul class="list-inline">
         <li class="m-right-5 "><a href="../lyrics.html">Lời bài hát</a></li>
         <li class="m-right-5 active"><a href="../chords.html">Hợp âm</a></li>
         <li class=""><a href="../kara.html">Karaoke</a></li>
     </ul>
-</div>
-    <!--   
+</div>--%>
+        <!--   
 <div class="site-view detail-item clearfix">
     <div>
         <div class="item shadow">
@@ -68,40 +69,53 @@ Tôi [Am] nghe Cha pi chợt thấy nao [C] lòng vì một [B7] giấc mơ, ôi
             </div>
         </div>
     </div>
-</div>  -->   
-       <asp:Literal ID="ltrDetail" runat="server"></asp:Literal>
+</div>  -->
 
-
-   </div>
-                <div class="col-md-4">
-                    <div class="col-md-12">
-    <div class="box">
-        
-        <h3>Cùng tác giả Trần Tiến&nbsp;<i class="fa fa-angle-double-right"></i></h3>
-        
-        <ul>
-            
-            <li>
-                <div class="li_r_row">
-                    <div class="info">
-                        <div class="bold"><i class="fa fa-file-text">&nbsp;</i><a href="94-mat-troi-be-con.html">Mặt trời bé con</a></div>
-                        <div class="artist">Trần Tiến</div>
-                        <div class="lyrics"><em> [Am]  [F]  [G]  [Am]  Ngoài kia [Am]&#8230;</em></div>
-                    </div>
-                    <div>
-                        <div class="icon">
-                            <a href="94-mat-troi-be-con.html"><i class="fa fa-angle-right fa-2x"></i></a>                        </div>
-                    </div>
-                </div>
-            </li>
-            
-        </ul>
-    </div>
-</div>
-
-            <div class="btnUpTop">
-                <a href="javascript:void(0)"><span class="glyphicon glyphicon-chevron-up"></span></a>
+        <div class="col-md-12">
+            <br />
+            <p>  Lựa chọn ngôn ngữ:</p>
+            <div class="col-md-10">
+                <asp:DropDownList CssClass="form-control" ID="drlLanguage" runat="server" OnSelectedIndexChanged="drlLanguage_SelectedIndexChanged"></asp:DropDownList>
+            </div>
+            <div class="col-md-2" style=" margin-top: 4px;">
+                <asp:Button ID="btnLang" runat="server" CssClass="btn btn-primary" Text="Chuyển lời" OnClick="btnLang_Click" />
             </div>
         </div>
+        <br />
+        <asp:Literal ID="ltrDetail" runat="server"></asp:Literal>
+
+
+    </div>
+    <div class="col-md-4">
+        <div class="col-md-12">
+            <div class="box">
+
+                <h3>Cùng tác giả <asp:Literal ID="ltrTacGia" runat="server"></asp:Literal>&nbsp;<i class="fa fa-angle-double-right"></i></h3>
+
+                <ul>
+
+                    <li>
+                        <div class="li_r_row" style="left: 0px; top: 0px">
+                            <div class="info">
+                                <div class="bold"><i class="fa fa-file-text">&nbsp;</i><a href="94-mat-troi-be-con.html">Mặt trời bé con</a></div>
+                                <div class="artist">Trần Tiến</div>
+                                <div class="lyrics"><em>[Am]  [F]  [G]  [Am]  Ngoài kia [Am]&#8230;</em></div>
+                            </div>
+                            <div>
+                                <div class="icon">
+                                    <a href="94-mat-troi-be-con.html"><i class="fa fa-angle-right fa-2x"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+
+        <div class="btnUpTop">
+            <a href="javascript:void(0)"><span class="glyphicon glyphicon-chevron-up"></span></a>
+        </div>
+    </div>
 
 </asp:Content>

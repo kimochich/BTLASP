@@ -17,7 +17,10 @@ namespace BTL
             menuDAO = new MenuDAO();
                 musicDAO = new MusicDAO();
                 ltrMenuCon.Text = menuDAO.loadMenuCon("1");
-                ltrMusic.Text = musicDAO.getItemNew();
+                ltrMusic.Text = musicDAO.getItemRandom();
+            //DataList1.DataSource = musicDAO.getItemNew();
+            //DataBind();
+            ltrRight.Text = musicDAO.getItemNew();
             
         }
     }

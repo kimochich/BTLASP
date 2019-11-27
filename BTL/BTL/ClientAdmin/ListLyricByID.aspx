@@ -10,8 +10,9 @@
                 <asp:BoundField DataField="LyricsID" HeaderText="LyricsID" InsertVisible="False" ReadOnly="True" SortExpression="LyricsID" />
                 <asp:BoundField DataField="MusicID" HeaderText="MusicID" SortExpression="MusicID" />
                 <asp:BoundField DataField="LanguageID" HeaderText="LanguageID" SortExpression="LanguageID" />
-                <asp:BoundField DataField="Lyric" HeaderText="Lyric" SortExpression="Lyric" />
+                <asp:BoundField DataField="Lyric" HeaderText="Lyric" SortExpression="Lyric" HtmlEncode="False" HtmlEncodeFormatString="False" />
                 <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" />
+                <asp:HyperLinkField DataNavigateUrlFields="LyricsID" DataNavigateUrlFormatString="LyricEdit.aspx?LyricsID={0}" HeaderText="Sửa" Text="Sửa lời" />
             </Columns>
         </asp:gridview>
         <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:BTLASPConnectionString2 %>" DeleteCommand="DELETE FROM [Lyrics] WHERE [LyricsID] = @LyricsID" InsertCommand="INSERT INTO [Lyrics] ([MusicID], [LanguageID], [Lyric]) VALUES (@MusicID, @LanguageID, @Lyric)" SelectCommand="SELECT * FROM [Lyrics] WHERE ([MusicID] = @MusicID)" UpdateCommand="UPDATE [Lyrics] SET [MusicID] = @MusicID, [LanguageID] = @LanguageID, [Lyric] = @Lyric WHERE [LyricsID] = @LyricsID">

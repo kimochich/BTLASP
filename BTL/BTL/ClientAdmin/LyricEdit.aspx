@@ -1,9 +1,8 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/ClientAdmin/AdminMasterPage.Master" AutoEventWireup="true" CodeBehind="Song_AddLyricsSongByID.aspx.cs" Inherits="BTL.ClientAdmin.Song_AddLyricsSong" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/ClientAdmin/AdminMasterPage.Master" AutoEventWireup="true" CodeBehind="LyricEdit.aspx.cs" Inherits="BTL.ClientAdmin.LyricEdit" %>
 <%@ Register Assembly="CKEditor.NET" Namespace="CKEditor.NET" TagPrefix="CKEditor" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="noidung" runat="server">
-   
-       <div class="col-lg-12">
-            <h2 class="text-center">Thêm lời bài hát mới</h2>
+          <div class="col-lg-12">
+            <h2 class="text-center">Sửa lời bài hát mới</h2>
             <div class="col-lg-2"></div>
             <div class="col-lg-8" style="margin-top:20px">
                 <div class="form-group">
@@ -29,7 +28,7 @@
                    
                 </div>
               <div>
-                  <asp:Button runat="server" CssClass="btn btn-success" Text="Thêm lời" OnClick="Unnamed1_Click" />
+                  <asp:Button runat="server" CssClass="btn btn-success" Text="Sửa lời" OnClick="Unnamed1_Click" />
                   <asp:Button runat="server" CssClass="btn btn-danger" Text="Hủy bỏ" PostBackUrl="~/ClientAdmin/Song_ListSong.aspx"/>
               </div>  
        
@@ -37,5 +36,4 @@
             <div class="col-lg-2"></div>
              
         </div>
-           
 </asp:Content>

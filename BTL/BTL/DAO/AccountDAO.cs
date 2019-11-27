@@ -40,7 +40,7 @@ namespace BTL.DAO
         public Boolean Register(Account acc)
         {
             String sql = "insert into Account values('"+acc.UserNamre+ "','" 
-                + acc.Password + "','" + acc.Address + "','" 
+                + acc.Password + "',N'" + acc.Address + "','" 
                 + acc.DataOfBirth + "','"+acc.Gender+"','false') ";
             Boolean kq=  db.ExcuteNonQuery(sql);
             return kq;  

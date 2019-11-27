@@ -15,14 +15,14 @@ namespace BTL
         protected void Page_Load(object sender, EventArgs e)
         {
             ltrMenu.Text = menu.loadMenuCha();
-            if(Session["user"]==null)
+            if (Session["user"] == null)
             {
                 ltrLogin.Text = "<ul class=\"nav navbar-nav navbar-right\">                    <li class=\"\"><a href=\"Register.aspx\"><i class=\"fa fa-key fa-fw\">&nbsp;</i>Đăng ký</a></li>                    <li class=\"\"><a href=\"Login.aspx\"><i class=\"fa fa-lock fa-fw\">&nbsp;</i>Đăng nhập</a></li>                </ul>";
             }
             else
             {
-                Account acc =(Account) Session["user"];
-                ltrLogin.Text = " <ul class=\"navbar-nav right\" style=\"list-style-type:none;\">                            <li class=\"dropdown user user-menu\">                                <a style=\"text-decoration:none; margin-top:5px\" href=\"#\"  class=\"dropdown-toggle\" data-toggle=\"dropdown\">                                    <img style=\"margin-top: 5px;\" height=\"40px\" width=\"40px\" src=\"../dist/img/user2-160x160.jpg\" class=\"user-image\" alt=\"User Image\" />                                    <span class=\"hidden-xs\">"+acc.UserNamre+"</span>                                </a>                            </li>                    </ul>";
+                Account acc = (Account)Session["user"];
+                ltrLogin.Text = " <ul class=\"navbar-nav right\" style=\"list-style-type:none;\">                            <li class=\"dropdown user user-menu\">                                <a style=\"text-decoration:none; margin-top:5px\" href=\"#\"  class=\"dropdown-toggle\" data-toggle=\"dropdown\">                                    <img style=\"margin-top: 5px;\" height=\"40px\" width=\"40px\" src=\"../dist/img/user2-160x160.jpg\" class=\"user-image\" alt=\"User Image\" />                                    <span class=\"hidden-xs\">" + acc.UserNamre + "</span>                                </a>                            </li>   <a style=\"text-decoration:none; margin-top:5px\" href='DangXuatController.aspx'  class=\"dropdown-toggle\" data-toggle=\"dropdown\">  <span class=\"hidden-xs\" style=\" line-height: 44px; margin-left: 5px;\">Đăng xuất</span>                                </a></li>                   </ul>";
             }
         }
     }

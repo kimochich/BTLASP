@@ -34,8 +34,8 @@
                     </div>
 
                     <div class="col-md-12">
-
-                            <div class="item shadow border-bot-tt">
+                      
+<%--                            <div class="item shadow border-bot-tt">
                                 <div class="item-info">
                                     <div class="li_m_row">
                                         <h3 class="bold"><i class="fa fa-file-text-o">&nbsp;</i><a href="lyrics/8489-quoc-ca.html">Quốc Ca</a>&nbsp;<i class="fa fa-link hide"></i></h3>
@@ -45,7 +45,7 @@
                                     <h5><i class="fa fa-user"></i>&nbsp;<a href="artist/van-cao.html">Văn Cao</a><em>&nbsp;|&nbsp;10 năm trước</em></h5>
                                     <em><a href="lyrics/8489-quoc-ca.html">Đoàn quân Việt Nam đi chung lòng cứu quốc, bước chân dồn vang trên đường gập ghềnh xa, cờ in máu chiến thắng mang hồn nước, súng ngoài xa chen&#8230;</a></em>
                                 </div>
-                            </div>
+                            </div>--%>
                         <asp:Literal ID="ltrMusic" runat="server"></asp:Literal>
                       
                     </div>
@@ -55,8 +55,7 @@
 
                 <nav>
                     <ul class="pager">
-                        <li><a href="lyrics/topview/2.html">Xem thêm »</a></li>
-                    </ul>
+                        <li><a href="lyrics/topview/2.html">Xem thêm »     </ul>
                 </nav>
 
 
@@ -70,15 +69,40 @@
                 <div class="col-md-12">
                     <div class="box">
                         <div>
-                            <h3 class="pull-left text-uppercase">Lời bài hát yêu thích nhất</h3>
+                            <h3 class="pull-left text-uppercase">Lời bài hát mới nhất</h3>
 
-                            <h3 class="pull-right"><a href="lyrics/toplike.html">Xem thêm&nbsp;<i class="fa fa-angle-double-right"></i></a></h3>
+                            <%--<h3 class="pull-right"><a href="lyrics/toplike.html">Xem thêm&nbsp;<i class="fa fa-angle-double-right"></i></a></h3>--%>
 
                             <div class="clearfix"></div>
                         </div>
                         <ul>
+                           
+                            <%--Dùng thử datalist nhưng lỗi css -- xấu--%>
+                          
+                            <%-- <asp:DataList ID="DataList1" runat="server">
+                                <ItemTemplate>
+                                    <li>
+                                        <div class="li_r_row">
+                                            <div class="info">
+                                                <div class="bold">
+                                                    <i class="fa fa-file-text">&nbsp;</i><a href="lyrics/11021-mong-uoc-ky-niem-xua.html"><%# Eval("MusicName") %></a></div>
+                                                <div class="artist">
+                                                   <%# Eval("AuthorName") %> </div>
+                                                <div class="lyrics">
+                                                    <em>Thời gian trôi qua mau chỉ còn lại những…</em></div>
+                                            </div>
+                                            <div>
+                                                <div class="icon">
+                                                    <a href="lyrics/11021-mong-uoc-ky-niem-xua.html"><i class="fa fa-angle-right fa-2x"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ItemTemplate>
+                            </asp:DataList>--%>
 
-                            <li>
+                            <%--Dòng lặp--%> 
+                          <%--  <li>
                                 <div class="li_r_row">
                                     <div class="info">
                                         <div class="bold"><i class="fa fa-file-text">&nbsp;</i><a href="lyrics/11021-mong-uoc-ky-niem-xua.html">Mong Ước Kỷ Niệm Xưa</a></div>
@@ -90,63 +114,12 @@
                                             <a href="lyrics/11021-mong-uoc-ky-niem-xua.html"><i class="fa fa-angle-right fa-2x"></i></a> </div>
                                     </div>
                                 </div>
-                            </li>
+                            </li>--%>
 
-                            <li>
-                                <div class="li_r_row">
-                                    <div class="info">
-                                        <div class="bold"><i class="fa fa-file-text">&nbsp;</i><a href="lyrics/421-thanh-pho-buon.html">Thành Phố Buồn</a></div>
-                                        <div class="artist">Lam Phương</div>
-                                        <div class="lyrics"><em>Thành phố nào nhớ không em?  Nơi chúng mình&#8230;</em></div>
-                                    </div>
-                                    <div>
-                                        <div class="icon">
-                                            <a href="lyrics/421-thanh-pho-buon.html"><i class="fa fa-angle-right fa-2x"></i></a> </div>
-                                    </div>
-                                </div>
-                            </li>
+                            <asp:Literal ID="ltrRight" runat="server"></asp:Literal>
+                        
 
-                            <li>
-                                <div class="li_r_row">
-                                    <div class="info">
-                                        <div class="bold"><i class="fa fa-file-text">&nbsp;</i><a href="lyrics/8879-mo-uoc-ngay-mai.html">Mơ Ước Ngày Mai</a></div>
-                                        <div class="artist">Trần Đức</div>
-                                        <div class="lyrics"><em>Em mang trên vai mầu khăn tươi thắm  Bao&#8230;</em></div>
-                                    </div>
-                                    <div>
-                                        <div class="icon">
-                                            <a href="lyrics/8879-mo-uoc-ngay-mai.html"><i class="fa fa-angle-right fa-2x"></i></a> </div>
-                                    </div>
-                                </div>
-                            </li>
-
-                            <li>
-                                <div class="li_r_row">
-                                    <div class="info">
-                                        <div class="bold"><i class="fa fa-file-text">&nbsp;</i><a href="lyrics/7578-beo-dat-may-troi.html">Bèo Dạt Mây Trôi</a></div>
-                                        <div class="artist">Dân Ca</div>
-                                        <div class="lyrics"><em>Bèo dạt mây trôi, chốn xa xôi, Anh ơi,&#8230;</em></div>
-                                    </div>
-                                    <div>
-                                        <div class="icon">
-                                            <a href="lyrics/7578-beo-dat-may-troi.html"><i class="fa fa-angle-right fa-2x"></i></a> </div>
-                                    </div>
-                                </div>
-                            </li>
-
-                            <li>
-                                <div class="li_r_row">
-                                    <div class="info">
-                                        <div class="bold"><i class="fa fa-file-text">&nbsp;</i><a href="lyrics/350-bien-tinh.html">Biển Tình</a></div>
-                                        <div class="artist">Lam Phương</div>
-                                        <div class="lyrics"><em>Nằm nghe sóng vỗ từng lớp xa  Bọt tràn&#8230;</em></div>
-                                    </div>
-                                    <div>
-                                        <div class="icon">
-                                            <a href="lyrics/350-bien-tinh.html"><i class="fa fa-angle-right fa-2x"></i></a> </div>
-                                    </div>
-                                </div>
-                            </li>
+                           
 
                         </ul>
                     </div>

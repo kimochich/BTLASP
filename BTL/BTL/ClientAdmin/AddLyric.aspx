@@ -19,7 +19,7 @@
                 <div class="form-group">
                     <label>Lời bài hát</label>
                     
-                   <CKEditor:CKEditorControl ID="CKEditor1" BasePath="/ckeditor/" runat="server">
+                   <CKEditor:CKEditorControl ID="cklyric" BasePath="/ckeditor/" runat="server">
 
                    </CKEditor:CKEditorControl>
                     <!--<asp:TextBox id="txtLoibaiHat" runat="server" class="form-control"  

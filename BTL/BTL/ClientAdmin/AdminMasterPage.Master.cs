@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BTL.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -11,7 +12,16 @@ namespace BTL.ClientAdmin
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+          
+            if (Session["user"] == null)
+            {
+                Response.Redirect("../Login.aspx");
+            }
+            else
+            {
+                Account acc = (Account)Session["user"];
+                ltrAdminName.Text = acc.UserNamre;
+            }
         }
     }
 }

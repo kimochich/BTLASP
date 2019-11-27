@@ -46,7 +46,7 @@ namespace BTL.ClientAdmin {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtLoibaiHat;
+        protected global::CKEditor.NET.CKEditorControl txtLoibaiHat;
         
         /// <summary>
         /// mess control.

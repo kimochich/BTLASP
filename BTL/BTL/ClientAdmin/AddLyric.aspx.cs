@@ -17,13 +17,13 @@ namespace BTL.ClientAdmin
 
         protected void Unnamed1_Click(object sender, EventArgs e)
         {
-            if (txtLoibaiHat.Text.Trim().Equals(""))
+            if (cklyric.Text.Trim().Equals(""))
             {
                 mess.Text = "Không được để trống lyric !";
             }
             else
             {
-                if (DBHelper.insertLyric(int.Parse(drlMusicID.Text), int.Parse(drlLanguage.Text), txtLoibaiHat.Text))
+                if (DBHelper.insertLyric(int.Parse(drlMusicID.Text), int.Parse(drlLanguage.Text), cklyric.Text))
                 {
                     Response.Redirect("Song_ListSong.aspx");
                 }

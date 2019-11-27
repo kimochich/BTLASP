@@ -41,7 +41,7 @@ namespace BTL
                     Session["user"] = acc;
                     if(acc.Role==true)
                     {
-                        Response.Redirect("ClientAdmin/TrangChuAdmin.aspx");
+                        Response.Redirect("ClientAdmin/AccountEdit.aspx");
                     }
                     else
                     {

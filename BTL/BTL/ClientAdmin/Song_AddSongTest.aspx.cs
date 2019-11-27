@@ -22,12 +22,17 @@ namespace BTL.ClientAdmin
             if (txtMusicName.Text.Equals(""))
             {
                 mes.Text = "Hãy nhập tên bài hát!";
-            }
-            
-            else
+            }else if(FileUpload1.FileName==null)
             {
-                bool isDone = dbHelper.addSong(drlUserName.Text, int.Parse(drlSubMenu.Text), int.Parse(drlCategory.Text), txtMusicName.Text, DateTime.Now.ToString("yyyy-MM-dd"), "nodata",
-                int.Parse(drlAuthor.Text));
+                mes.Text = "Bạn chưa nhập ảnh";
+            }
+            else 
+            {
+                String Path = Server.MapPath("~/Images/");
+
+                String filename = FileUpload1.FileName;
+                FileUpload1.PostedFile.SaveAs(Path + filename);
+                bool isDone = dbHelper.addSong(drlUserName.Text, int.Parse(drlSubMenu.Text), int.Parse(drlCategory.Text), txtMusicName.Text, DateTime.Now.ToString("yyyy-MM-dd"), filename,int.Parse(drlAuthor.Text));
                 if (isDone)
                 {
                    int id = dbHelper.getLastIdSong();

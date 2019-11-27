@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="TrangChuAdmin.aspx.cs" Inherits="BTL.ClientAdmin.TrangChuAdmin" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="giaodiengoc.aspx.cs" Inherits="BTL.ClientAdmin.TrangChuAdmin" %>
 
 <!DOCTYPE html>
 

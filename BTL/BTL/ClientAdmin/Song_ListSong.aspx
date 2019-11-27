@@ -20,9 +20,18 @@
                    <asp:BoundField DataField="CategoryID" HeaderText="CategoryID" SortExpression="CategoryID" />
                    <asp:BoundField DataField="MusicName" HeaderText="MusicName" SortExpression="MusicName" />
                    <asp:BoundField DataField="DateCreated" HeaderText="DateCreated" SortExpression="DateCreated" />
-                   <asp:BoundField DataField="Image" HeaderText="Image" SortExpression="Image" />
-                   <asp:CommandField  ShowDeleteButton="True" ShowEditButton="True" />
+                   <asp:TemplateField HeaderText="Image" SortExpression="Image">
+                       <EditItemTemplate>
+                           <asp:FileUpload ID="FileUpload1" runat="server" />
+                       </EditItemTemplate>
+                       <ItemTemplate>
+                           <asp:Image ID="TextBox1" runat="server" Width="120px" Height="120px" ImageUrl='<%#"~/Images/"+Eval("Image") %>' ></asp:Image>
+                       </ItemTemplate>
+                       <FooterStyle Width="100px" />
+                   </asp:TemplateField>
+                   <asp:HyperLinkField DataNavigateUrlFields="MusicID" DataNavigateUrlFormatString="Song_EditbyID.aspx?MusicID={0}" HeaderText="Sửa thông tin" Text="Sửa" />
                    <asp:HyperLinkField DataNavigateUrlFields="MusicID" DataNavigateUrlFormatString="ListLyricById.aspx?MusicID={0}" Text="Quản lý lyric" />
+                   <asp:CommandField  ShowDeleteButton="True" />
                </Columns>
 
                <FooterStyle BackColor="White" ForeColor="#000066" />

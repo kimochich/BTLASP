@@ -21,7 +21,7 @@
                 <asp:TextBox  class="form-control" ID="DescriptionTextBox" runat="server" Text='<%# Bind("Description") %>' />
                 <br />
                 Gender:
-                <asp:CheckBox CssClass="checkbox" ID="GenderCheckBox" runat="server" Checked='<%# Bind("Gender") %>' />
+                <asp:CheckBox CssClass="checkbox" ID="GenderCheckBox" runat="server" Checked='<%# Bind("Gender") %>' />Nam
                 <br />
                 <asp:LinkButton CssClass="btn btn-success" ID="InsertButton" runat="server" CausesValidation="True" CommandName="Insert" Text="Insert" />
                 &nbsp;<asp:LinkButton CssClass="btn btn-danger" ID="InsertCancelButton" runat="server" CausesValidation="False" CommandName="Cancel" Text="Cancel" />

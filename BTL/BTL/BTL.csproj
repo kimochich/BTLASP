@@ -460,10 +460,13 @@
     <Content Include="ClientAdmin\AuthorInsert.aspx" />
     <Content Include="ClientAdmin\ListAuthor.aspx" />
     <Content Include="ClientAdmin\ListLyricByID.aspx" />
+    <Content Include="ClientAdmin\LyricEdit.aspx" />
     <Content Include="ClientAdmin\Song_AddLyricsSongByID.aspx" />
     <Content Include="ClientAdmin\Song_AddSongTest.aspx" />
+    <Content Include="ClientAdmin\Song_EditbyID.aspx" />
     <Content Include="ClientAdmin\Song_ListSong.aspx" />
-    <Content Include="ClientAdmin\TrangChuAdmin.aspx" />
+    <Content Include="ClientAdmin\giaodiengoc.aspx" />
+    <Content Include="DangXuatController.aspx" />
     <Content Include="Detail.aspx" />
     <Content Include="dist\css\AdminLTE.min.css" />
     <Content Include="dist\css\skins\_all-skins.min.css" />
@@ -490,6 +493,7 @@
     <Content Include="dist\js\pages\dashboard2.js" />
     <Content Include="Global.asax" />
     <Content Include="Home.aspx" />
+    <Content Include="Images\76899632_562763177845053_5063748660819394560_n.jpg" />
     <Content Include="Login.aspx" />
     <Content Include="maxcdn.bootstrapcdn.com\bootstrap\3.3.0\css\bootstrap.min.css" />
     <Content Include="maxcdn.bootstrapcdn.com\bootstrap\3.3.0\js\bootstrap.min.js" />
@@ -497,7 +501,7 @@
     <Content Include="Register.aspx" />
     <Content Include="Search.aspx" />
     <Content Include="SearchByMenu.aspx" />
-    <Content Include="TrangChu.aspx" />
+    <Content Include="TrangChugiaodiengoc.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -551,6 +555,13 @@
     <Compile Include="ClientAdmin\ListLyricByID.aspx.designer.cs">
       <DependentUpon>ListLyricByID.aspx</DependentUpon>
     </Compile>
+    <Compile Include="ClientAdmin\LyricEdit.aspx.cs">
+      <DependentUpon>LyricEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ClientAdmin\LyricEdit.aspx.designer.cs">
+      <DependentUpon>LyricEdit.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ClientAdmin\Song_AddLyricsSongByID.aspx.cs">
       <DependentUpon>Song_AddLyricsSongByID.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -565,6 +576,13 @@
     <Compile Include="ClientAdmin\Song_AddSongTest.aspx.designer.cs">
       <DependentUpon>Song_AddSongTest.aspx</DependentUpon>
     </Compile>
+    <Compile Include="ClientAdmin\Song_EditbyID.aspx.cs">
+      <DependentUpon>Song_EditbyID.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ClientAdmin\Song_EditbyID.aspx.designer.cs">
+      <DependentUpon>Song_EditbyID.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ClientAdmin\Song_ListSong.aspx.cs">
       <DependentUpon>Song_ListSong.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -572,14 +590,22 @@
     <Compile Include="ClientAdmin\Song_ListSong.aspx.designer.cs">
       <DependentUpon>Song_ListSong.aspx</DependentUpon>
     </Compile>
-    <Compile Include="ClientAdmin\TrangChuAdmin.aspx.cs">
-      <DependentUpon>TrangChuAdmin.aspx</DependentUpon>
+    <Compile Include="ClientAdmin\giaodiengoc.aspx.cs">
+      <DependentUpon>giaodiengoc.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="ClientAdmin\TrangChuAdmin.aspx.designer.cs">
-      <DependentUpon>TrangChuAdmin.aspx</DependentUpon>
+    <Compile Include="ClientAdmin\giaodiengoc.aspx.designer.cs">
+      <DependentUpon>giaodiengoc.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DangXuatController.aspx.cs">
+      <DependentUpon>DangXuatController.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DangXuatController.aspx.designer.cs">
+      <DependentUpon>DangXuatController.aspx</DependentUpon>
     </Compile>
     <Compile Include="DAO\AccountDAO.cs" />
+    <Compile Include="DAO\LanguageDAO.cs" />
     <Compile Include="DAO\MenuDAO.cs" />
     <Compile Include="DAO\MusicDAO.cs" />
     <Compile Include="Detail.aspx.cs">
@@ -636,12 +662,12 @@
     <Compile Include="SearchByMenu.aspx.designer.cs">
       <DependentUpon>SearchByMenu.aspx</DependentUpon>
     </Compile>
-    <Compile Include="TrangChu.aspx.cs">
-      <DependentUpon>TrangChu.aspx</DependentUpon>
+    <Compile Include="TrangChugiaodiengoc.aspx.cs">
+      <DependentUpon>TrangChugiaodiengoc.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="TrangChu.aspx.designer.cs">
-      <DependentUpon>TrangChu.aspx</DependentUpon>
+    <Compile Include="TrangChugiaodiengoc.aspx.designer.cs">
+      <DependentUpon>TrangChugiaodiengoc.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
